@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">West Shore Tahoe</string>
+
+    <string name="forest">Forest</string>
+    <string name="rock">Rock</string>
+    <string name="snow">Snow</string>
+    <string name="water">Water</string>
+
+    <string name="haiku1">This is the first Haiku</string>
+    <string name="haiku2">This is the second Haiku</string>
+    <string name="haiku3">Skinning up Pole Creek\n\nSo much snow, yet drip, drip, drip\n\nand, the birds are here</string>
+    <string name="haiku4">The rich stake it out\n\nEveryone desires it\nT\nhe lake is its own</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
