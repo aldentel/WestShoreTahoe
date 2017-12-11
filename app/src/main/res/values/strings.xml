@@ -1,17 +1,76 @@
 <resources>
     <string name="app_name">West Shore Tahoe</string>
 
+    <string name="title_activity_forest">Forest</string>
+    <string name="title_activity_beer">Beer</string>
+    <string name="title_activity_snow">Snow</string>
+    <string name="title_activity_water">Water</string>
+
+    <!-- Opening -->
+
+    <string name="opening">Of the things that I love in this world, three things stand tall among them: The beauty of my home in the mountains, haikus, and beer. May this app give you a taste of each and lead you to some lovely and interesting places.</string>
+
+    <!-- names of tabs -->
     <string name="forest">Forest</string>
-    <string name="rock">Rock</string>
+    <string name="beer">Beer</string>
     <string name="snow">Snow</string>
     <string name="water">Water</string>
 
-    <string name="haiku1">This is the first Haiku</string>
-    <string name="haiku2">This is the second Haiku</string>
-    <string name="haiku3">Skinning up Pole Creek\n\nSo much snow, yet drip, drip, drip\n\nand, the birds are here</string>
-    <string name="haiku4">The rich stake it out\n\nEveryone desires it\nT\nhe lake is its own</string>
+    <!-- Haikus -->
+    <string name="haiku1">Rooted in the earth\n\nBreathing life into the sky\n\nMany together</string>
+    <string name="haiku2">Cold, powdery white\n\nSparkling surface for sliding\n\nCrystals of water</string>
+    <string name="haiku3">Expansive and blue\n\nAt once restless and so calm\n\nEnveloping all</string>
+    <string name="haiku4">Each sip is bitter\n\nDelicious to the weary\n\nTurns sweet in the mind</string>
 
-    <string name="title_activity_fullscreen">FullscreenActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- Links to places -->
+    <string name="homewood_mountain"><a href="http://www.skihomewood.com/">Homewood Mountain Resort</a></string>
+    <string name="jakes_peak"><a href="http://http://www.skitahoebackcountry.com/guide/west-shore//">Jakes Peak</a></string>
+    <string name="blackwood"><a href="http://http://www.skitahoebackcountry.com/guide/west-shore//">Blackwood Canyon</a></string>
+    <string name="tahoe_rim_trail"><a href="https://tahoerimtrail.org/maps-trail-info">Tahoe Rim Trail</a></string>
+    <string name="pct"><a href="https://www.pcta.org/discover-the-trail/geography/central-california/"> Pacific Crest Trail</a></string>
+    <string name="burton_creek"><a href="https://www.parks.ca.gov/?page_id=512"> Burton Creek State Park</a></string>
+    <string name="rubicon_trail"><a href="http://www.rubicontrail.org/"> Rubicon Trail</a></string>
+    <string name="emerald_bay"><a href="https://www.parks.ca.gov/?page_id=506"> Emerald Bay State Park</a></string>
+    <string name="dl_bliss"><a href="https://www.parks.ca.gov/?page_id=505"> DL Bliss State Park</a></string>
+    <string name="eagle_rock"><a href="http://thetahoeweekly.com/2014/08/tahoe-time-panoramic-views-eagle-rock/"> Eagle Rock</a></string>
+    <string name="westshore_pizza"><a href="http://www.westshorepizzatahoe.com/"> West Shore Pizza</a></string>
+    <string name="tahoe_mountain_brew"><a href="http://tahoebrewing.com/"> Tahoe Mountain Brewery</a></string>
+    <string name="chambers_landing"><a href="http://www.chamberspunch.com/"> Chambers Landing</a></string>
+    <string name="bridgetender"><a href="https://www.tahoebridgetender.com/"> Bridgetender</a></string>
+    <string name="west_shore_cafe"><a href="https://www.westshorecafe.com/"> West Shore Cafe</a></string>
+    <string name="commons_beach"><a href="http://www.tahoecitypud.com/parksrec/4e2_commons_beach.shtml"> Commons Beach</a></string>
+    <string name="sailing"><a href="https://tahoe-sailing.com/"> TCPUD Sailing</a></string>
+    <string name="obexers_boat"><a href="http://obexersboat.com"> Obexer\'s Boat Company</a></string>
+    <string name="high_and_dry"><a href="http://www.homewoodmarina.net//"> Homewood High and Dry</a></string>
+    <string name="ed_zburg"><a href="https://www.parks.ca.gov/pages/510/files/EdZSugarPinePtSkiTrailMapWinter2"> Ed Z\'berg Sugar Pine Point State Park</a></string>
+    <string name="meeks_bay"><a href="https://www.outdoorproject.com/adventures/california/swimming-holes-cliff-jumping/meeks-bay-beach//"> Meeks Bay Beach</a></string>
+    <string name="sugar_pine_beach"><a href="https://www.parks.ca.gov/?page_id=510"> Sugar Pine Point State Park</a></string>
+    <string name="tahoe_city_ski"><a href="www.tahoexc.org//"> Tahoe City XC</a></string>
+    <string name="granlibakken"><a href="http://granlibakken.com///">Granlibakken</a></string>
+
+    <!-- Descriptions -->
+    <string name="burton_desc">State Park with gravel paths for running or dog adventures</string>
+    <string name="pct_desc">World famous trail in the Sierra high country</string>
+    <string name="trt_desc">Trail that runs around the entire lake</string>
+    <string name="eagle_desc">Short trail to panaoramic view of the lake</string>
+    <string name="bliss_desc">State Park with awe inspiring trails, beaches and camping</string>
+    <string name="emerald_desc">State Park with an historic mansion, waterfalls and camping</string>
+    <string name="sugarpine_desc">State Park with groomed crosscountry ski trails and gorgeous lake views</string>
+    <string name="homewood_desc">Ski resort with dramatic lake views and hidden powder stashes</string>
+    <string name="xc_desc">Crosscountry ski area with groomed trails and rentals</string>
+    <string name="jakes_desc">Popular backcountry ski peak with fun downhill lines</string>
+    <string name="blackwood_desc">Backcountry snow area with easy touring trails up to hardcore steeps</string>
+    <string name="gran_desc">Resort with skiing, sledding and lodging</string>
+    <string name="commons_desc">Beach with a paved path, kid\'s play area, marina access</string>
+    <string name="sailing_desc">Sailing program for adults and kids</string>
+    <string name="obex_desc">Marina with boat launch, jetski rentals, lodging and general store</string>
+    <string name="highdry_desc">Marina with boat launch, waterskiing and storage</string>
+    <string name="sugarbeach_desc">Beach only accessible by trail or water</string>
+    <string name="meeks_desc">Beach resort with sandy beach, picnic areas, and camping</string>
+    <string name="tmb_desc">Brewpub with pub food and beer</string>
+    <string name="wsp_desc">Local watering hole with good pizza and beer</string>
+    <string name="chambers_desc">Resort with lakefront bar serving cocktails and beer</string>
+    <string name="bridge_desc">Bar and grill with great food and beer</string>
+    <string name="wsc_desc">Restaurant with seating on the deck, upscale food and beer</string>
+
 </resources>

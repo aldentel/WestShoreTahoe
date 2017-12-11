@@ -1,6 +1,7 @@
 package com.example.android.westshoretahoe;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -25,30 +26,30 @@ public class SnowFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.list_layout, container, false);
-
-        rootView.setBackgroundResource(R.drawable.snow);
-
-        final ArrayList<Tahoepicslist> snow = new ArrayList<>();
-        snow.add(new Tahoepicslist(R.drawable.homewood));
-        snow.add(new Tahoepicslist(R.drawable.sugarpine_snowshoe));
-        snow.add(new Tahoepicslist(R.drawable.homewood));
-        snow.add(new Tahoepicslist(R.drawable.homewood));
-        snow.add(new Tahoepicslist(R.drawable.homewood));
-        snow.add(new Tahoepicslist(R.drawable.homewood));
-
-        TahoeAdapter adapter = new TahoeAdapter(getActivity(), snow);
-
-        ListView listView = rootView.findViewById(R.id.list);
-
-        listView.setAdapter(adapter);
+        View rootView = inflater.inflate(R.layout.fragment_layout, container, false);
 
         TextView textView = rootView.findViewById(R.id.haiku);
 
-        textView.setText(R.string.haiku3);
+        textView.setText(R.string.haiku2);
 
+        textView.setBackgroundResource(R.drawable.snow);
+        textView.setTextColor(getResources().getColor(R.color.colorPrimary));
+
+
+        // Set a click listener on fragment
+        textView.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the TextView is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent snowIntent = new Intent(getActivity(), SnowActivity.class);
+                startActivity(snowIntent);
+            }
+
+
+        });
         return rootView;
-
     }
 
 }
+
+

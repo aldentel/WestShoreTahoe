@@ -5,8 +5,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import static android.R.attr.fragment;
-
 /**
  * Created by Salome on 9/15/17.
  */
@@ -28,10 +26,10 @@ public class TahoeFragmentPagerAdapter extends FragmentPagerAdapter {
         if (position == 0) {
             return new ForestFragment();
         } else if (position == 1){
-            return new RockFragment();
-        } else if (position == 2){
             return new SnowFragment();
-        } else return new WaterFragment();
+        } else if (position == 2){
+            return new WaterFragment();
+        } else return new BeerFragment();
     }
 
     @Override
@@ -44,11 +42,11 @@ public class TahoeFragmentPagerAdapter extends FragmentPagerAdapter {
         if (position == 0) {
             return mContext.getString(R.string.forest);
         } else if (position == 1) {
-            return mContext.getString(R.string.rock);
-        } else if (position == 2) {
             return mContext.getString(R.string.snow);
-        } else {
+        } else if (position == 2) {
             return mContext.getString(R.string.water);
+        } else {
+            return mContext.getString(R.string.beer);
         }
     }
 }

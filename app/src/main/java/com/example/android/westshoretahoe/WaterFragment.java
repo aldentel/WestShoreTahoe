@@ -1,6 +1,7 @@
 package com.example.android.westshoretahoe;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -27,30 +28,28 @@ public class WaterFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.list_layout, container, false);
-
-        rootView.setBackgroundResource(drawable.waterbackground);
-
-        final ArrayList<Tahoepicslist> water = new ArrayList<>();
-        water.add(new Tahoepicslist(drawable.westshore_rainbow));
-        water.add(new Tahoepicslist(drawable.sugarpine_beach));
-        water.add(new Tahoepicslist(drawable.fannybridge));
-        water.add(new Tahoepicslist(drawable.powerboat));
-        water.add(new Tahoepicslist(drawable.sailboats));
-        water.add(new Tahoepicslist(R.drawable.roughwater));
-
-        TahoeAdapter adapter = new TahoeAdapter(getActivity(), water);
-
-        ListView listView = rootView.findViewById(R.id.list);
-
-        listView.setAdapter(adapter);
+        View rootView = inflater.inflate(R.layout.fragment_layout, container, false);
 
         TextView textView = rootView.findViewById(R.id.haiku);
 
-        textView.setText(R.string.haiku4);
+        textView.setText(string.haiku3);
 
+        textView.setBackgroundResource(drawable.waterbackground);
+        textView.setTextColor(getResources().getColor(R.color.textdark));
+
+
+        // Set a click listener on fragment
+        textView.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the TextView is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent waterIntent = new Intent(getActivity(), WaterActivity.class);
+                startActivity(waterIntent);
+            }
+
+
+        });
         return rootView;
-
     }
 
 }

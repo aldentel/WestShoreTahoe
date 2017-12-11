@@ -1,31 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        />
     <ListView
-        android:orientation="vertical"
-        android:layout_width="88dp"
-        android:layout_height="match_parent"
         android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:drawSelectorOnTop="true"
         android:numColumns="1"
-        android:divider="@android:color/transparent"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/haiku"
-        android:textSize="20sp"
-        tools:text="@string/haiku1"
-        android:textAlignment="center"
-        android:paddingTop="144dp"
-        android:paddingLeft="8dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="italic"/>
-
+        android:orientation="vertical" />
 
 </LinearLayout>

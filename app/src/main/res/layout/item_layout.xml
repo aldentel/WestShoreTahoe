@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,10 +8,35 @@
     <ImageView
         android:id="@+id/tahoe_picture"
         style="@style/ImageStyle"
-        android:scaleType="centerInside"
-        android:padding="8dp"
+        android:layout_alignParentLeft="true"
         android:background="@color/colorPrimaryDark"
-        android:layout_alignParentLeft="true"/>
+        android:padding="8dp"
+        android:scaleType="centerInside"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/place_description"
+            style="@style/WordStyle"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            tools:text="@string/pct_desc"
+            />
+
+        <TextView
+            android:id="@+id/place_link"
+            style="@style/WordStyle"
+            android:textAlignment="center"
+            android:textColorLink="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            tools:text="@string/pct"
+            />
+    </LinearLayout>
 
 </RelativeLayout>

@@ -1,18 +1,26 @@
 package com.example.android.westshoretahoe;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.DrawableRes;
 import android.support.v4.content.ContextCompat;
+import android.text.method.LinkMovementMethod;
+import android.text.method.Touch;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.RelativeLayout.LayoutParams;
 
 import java.util.ArrayList;
 
@@ -20,20 +28,14 @@ import java.util.ArrayList;
  * Created by Salome on 9/23/17.
  */
 
-public class TahoeAdapter extends ArrayAdapter<Tahoepicslist> {
+public class TahoeAdapter extends ArrayAdapter<Tahoeplace> {
 
     private Context context;
 
-    /** Resource ID for the background picture for this list of words */
-    //private int mDrawableResourceID;
-
-
-    public TahoeAdapter(Activity context, ArrayList<Tahoepicslist> tahoe) {
+    public TahoeAdapter(Activity context, ArrayList<Tahoeplace> tahoe) {
 
         super(context, 0, tahoe);
         this.context = context;
-
-        //mDrawableResourceID = drawableResourceID;
 
     }
 
@@ -45,34 +47,45 @@ public class TahoeAdapter extends ArrayAdapter<Tahoepicslist> {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.item_layout, parent, false);}
 
-        Tahoepicslist currentPlace = getItem(position);
+        final Tahoeplace currentPlace = getItem(position);
 
-        final ImageView pictureImageView = listItemView.findViewById(R.id.tahoe_picture);
-        pictureImageView.setImageResource(currentPlace.getImageResourceID());
+        ImageView imageView = listItemView.findViewById(R.id.tahoe_picture);
+        imageView.setImageResource(currentPlace.getImageResourceID());
 
-        // Set a click listener on ImageView
-        pictureImageView.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the ImageView is clicked on.
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent pictureIntent = new Intent(getContext(), FullscreenActivity.class);
-                context.startActivity(pictureIntent);}
-    });
+            public void onClick(View v) {
 
-        // Set the picture for the list item
-        //View textBackground = listItemView.findViewById(R.id.text_background);
+                final Dialog dialog = new Dialog(context);
+                dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
-        //textBackground.setBackgroundResource(mDrawableResourceID);
+                RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+                lp.addRule(RelativeLayout.CENTER_IN_PARENT);
+                ImageView iv = new ImageView(context);
+                iv.setLayoutParams(lp);
+                iv.setImageResource(currentPlace.getImageResourceID());
+
+                dialog.addContentView(iv,lp);
+                dialog.show();
+
+                iv.setOnClickListener (new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View v) {
+                        dialog.hide();
+                    }
+            });}});
 
 
-        /**TextView descriptTextView = listItemView.findViewById(R.id.place_description);
+        TextView descriptTextView = listItemView.findViewById(R.id.place_description);
         descriptTextView.setText(currentPlace.getPlaceDescription());
         descriptTextView.getBackground();
 
         TextView linkTextView = listItemView.findViewById(R.id.place_link);
-        linkTextView.setText(currentPlace.getPlaceLink());*/
+        linkTextView.setText(currentPlace.getPlaceLink());
+
+        linkTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
         return listItemView;
 
-    }
-}
+}}

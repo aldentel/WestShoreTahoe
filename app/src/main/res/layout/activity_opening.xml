@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tahoe"
+    tools:context="com.example.android.westshoretahoe.OpeningActivity">
+
+    <TextView
+        android:id="@+id/opening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="44dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/opening"
+        android:textAlignment="center"
+        android:textColor="#01579B"
+        android:textSize="20sp"
+        tools:text="Of the things that I love in this world, three things stand tall among them: The natural world, haikus, and beer. May this app give you a taste of each and lead you to some interesting places." />
+
+    <Button
+        android:id="@+id/enter_here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.4"
+        android:text="Enter Here"
+        android:textColor="#01579B"/>
+</RelativeLayout>

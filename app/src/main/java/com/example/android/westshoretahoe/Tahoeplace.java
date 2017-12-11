@@ -1,5 +1,8 @@
 package com.example.android.westshoretahoe;
 
+import android.content.res.Resources;
+import android.support.annotation.StringRes;
+
 /**
  * {@Link Tahoeplace} Represents a specific place on the West Shore.
  * It creates a picture, description and a link for each place.
@@ -11,12 +14,12 @@ public class Tahoeplace {
     private int mImageResourceID;
 
     /** Description of the place */
-    private String mPlaceDescription;
+    private int mPlaceDescription;
 
     /** Miwok translation for the word */
-    private String mPlaceLink;
+    private int mPlaceLink;
 
-    public Tahoeplace(int ImageResourceID, String PlaceDescription, String PlaceLink){
+    public Tahoeplace(int ImageResourceID, int PlaceDescription, int PlaceLink){
         mImageResourceID = ImageResourceID;
         mPlaceDescription = PlaceDescription;
         mPlaceLink = PlaceLink;}
@@ -25,12 +28,12 @@ public class Tahoeplace {
     public int getImageResourceID(){return mImageResourceID;}
 
     /** Get the description */
-    public String getPlaceDescription() {
+    public int getPlaceDescription() {
         return mPlaceDescription;
     }
 
     /** Get the link */
-    public String getPlaceLink() {
+    public int getPlaceLink() {
         return mPlaceLink;
     }
 

@@ -3,7 +3,7 @@
     <color name="colorPrimary">#039BE5</color>
     <color name="colorPrimaryDark">#0277BD</color>
     <color name="colorAccent">#84FFFF</color>
-
+    <color name="textdark">#01579B</color>
     <color name="black_overlay">#66000000</color>
 
     <!-- Background color for app -->
